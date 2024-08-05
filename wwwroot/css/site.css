@@ -87,7 +87,7 @@ body {
 
 /*Navbar*/
 nav.navbar {
-    background-color: rgba(18, 22, 29);
+    background-color: floralwhite;
 }
 
     nav.navbar i {
@@ -130,8 +130,8 @@ img.profile-pic {
     }
 
 #sidebar {
-    background-color: #12161d;
-    border-right: 1px dashed rgba(75,82,85,0.24);
+    background-color: floralwhite;
+    border-right: 2px dashed rgba(75,82,85,0.24);
     padding: 10px 20px;
     overflow: hidden;
 }

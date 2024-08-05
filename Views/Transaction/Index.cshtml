@@ -10,14 +10,14 @@
     <div class="col-md-7">
         <ejs-grid id="transactions" dataSource="@Model" gridLines="None"
                   allowSorting="true" allowPaging="true">
-            <e-grid-pagesettings pageSize="10"></e-grid-pagesettings>
+            <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
 
             <e-grid-columns>
-                <e-grid-column headerText="Category" field="CategoryTitleWithIcon"></e-grid-column>
-                <e-grid-column headerText="Date" field="Date" width="110px"
+                <e-grid-column headerText="Category" field="CategoryTitleWithIcon" width="120px"></e-grid-column>
+                <e-grid-column headerText="Date" field="Date" width="130px"
                                type="date" format="MMM-dd-yy" textAlign="Left"></e-grid-column>
-                <e-grid-column headerText="Amount" field="FormattedAmount" textAlign="Right" width="110px"></e-grid-column>
-                <e-grid-column headerText="Actions" template="#actionColumnTemplate" width="100px"></e-grid-column>
+                <e-grid-column headerText="Amount" template="#typeColumnTemplate" field="FormattedAmount" textAlign="Right" width=""></e-grid-column>
+                <e-grid-column headerText="Actions" template="#actionColumnTemplate" width=""></e-grid-column>
             </e-grid-columns>
         </ejs-grid>
     </div>
@@ -28,6 +28,15 @@
         </div>
     </div>
 </div>
+
+<script id="typeColumnTemplate" type="text/x-template">
+    ${if(FormattedAmount.startsWith('+'))}
+        <span class="badge bg-success">${FormattedAmount}</span>
+    ${else}
+        <span class="badge bg-danger">${FormattedAmount}</span>
+    ${/if}
+</script>
+
 
 <script id="actionColumnTemplate" type="text/x-template">
     <div class="d-flex flex-row justify-content-start">

@@ -23,6 +23,7 @@ namespace Expense_Tracker_App.Models
             get => _date;
             set => _date = DateTime.SpecifyKind(value, DateTimeKind.Utc);
         }
+
         [NotMapped]
         public string? CategoryTitleWithIcon
         {
