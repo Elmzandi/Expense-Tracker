@@ -29,7 +29,8 @@ This project is a complete ASP.NET Core application created to showcase the deve
 2. **Configure the Database**:
     - Update the database connection string in `appsettings.json`.
     - Create Database with Migration
-      ```bash
+      
+   ```bash
     Add-Migration "NameofMigration"
     update-databse
     ```
